@@ -1,0 +1,9 @@
+:root{
+    --var-clickedCell : #0bfa96;
+    --var-unclickedCell : black;
+}
+
+.gridCell{
+    width: calc(100% / 12 * 1.2) ;
+}
+
