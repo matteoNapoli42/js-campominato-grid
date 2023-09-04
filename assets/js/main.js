@@ -29,7 +29,7 @@ function start(){
         div.setAttribute("id",`row${i}`);
         document.getElementById("container").appendChild(div);
         
-        for(j=0; i<cellNumber;j++)
+        for(j=0; j<10;j++)
         {
             let div=document.createElement("div");
             div.setAttribute("id",x);
@@ -44,6 +44,7 @@ function start(){
 function clear(){
     document.getElementById("container").innerHTML="";
     document.getElementById("grid-dim").value="";
+    x=1;
 }
 
 function disable(){
