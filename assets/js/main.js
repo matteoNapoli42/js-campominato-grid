@@ -23,13 +23,13 @@ function start(){
         alert("Numero troppo grande, impostato valore massimo consentito");
     }
 
-    for(i=0;i<cellNumber;++i){
+    for(i=0;i<cellNumber;i++){
         let div = document.createElement("div");
         div.setAttribute("class","inner-container");
         div.setAttribute("id",`row${i}`);
         document.getElementById("container").appendChild(div);
         
-        for(j=0; i<cellNumber;++j)
+        for(j=0; i<cellNumber;j++)
         {
             let div=document.createElement("div");
             div.setAttribute("id",x);
