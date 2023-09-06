@@ -5,9 +5,10 @@
 }
 
 body{
-   justify-content: center;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 form{
@@ -20,21 +21,20 @@ form{
     justify-content: center;
     flex-wrap: wrap;
     width: 80%;
-    margin: 10rem auto;
     background-color: aquamarine;
+    margin: 5rem auto;
 }
 
 .inner-container{
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
 }
 
 .gridCell{
     height: 100%;
-    background-color: red;
-    width: calc(100% / 12 * 1.2);
+    background-color: darkblue;
+    width: calc(100% / 10);
     border: 2px solid ;
+    padding: 15px 0px 15px 50px;
 }
 

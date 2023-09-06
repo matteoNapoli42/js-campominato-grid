@@ -1,4 +1,3 @@
-let x = 1;
 
 let container = document.getElementById("container");
 let btnStart = document.getElementById("genera");
@@ -8,6 +7,8 @@ btnStart.addEventListener("click",start);
 btnStart.addEventListener("click", disable);
 btnReset.addEventListener("click",clear);
 btnReset.addEventListener("click",activate);
+
+
 
 function start(){
     cellNumber = parseInt(document.getElementById("grid-dim").value);
@@ -23,28 +24,24 @@ function start(){
         alert("Numero troppo grande, impostato valore massimo consentito");
     }
 
-    for(i=0;i<cellNumber;i++){
+    for(i=1;i<cellNumber*10 + 1;i++){
         let div = document.createElement("div");
-        div.setAttribute("class","inner-container");
-        div.setAttribute("id",`row${i}`);
+        div.setAttribute("class","gridCell");
+        div.setAttribute("id",i);
         document.getElementById("container").appendChild(div);
-        
-        for(j=0; j<10;j++)
-        {
-            let div=document.createElement("div");
-            div.setAttribute("id",x);
-            div.setAttribute("class", "gridCell");
-            document.getElementById(`row${i}`).appendChild(div);
-            document.getElementById(x).innerHTML=`<span>${x}</span>`;
-            x++;
-        }
+        document.getElementById(i).append(i);
+        div.addEventListener("click", function(clickCell){
+            console.log(this);
+            this.style.backgroundColor="green";
+            console.log(this.innerText);
+        })
     }
+   
 }
 
 function clear(){
     document.getElementById("container").innerHTML="";
     document.getElementById("grid-dim").value="";
-    x=1;
 }
 
 function disable(){
@@ -56,3 +53,4 @@ function activate(){
     document.getElementById("genera").disabled = false;
     document.getElementById("reset").disabled = true;
 }
+
