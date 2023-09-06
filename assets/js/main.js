@@ -1,4 +1,3 @@
-
 let container = document.getElementById("container");
 let btnStart = document.getElementById("genera");
 let btnReset = document.getElementById("reset");
@@ -53,4 +52,3 @@ function activate(){
     document.getElementById("genera").disabled = false;
     document.getElementById("reset").disabled = true;
 }
-
